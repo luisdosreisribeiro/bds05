@@ -9,14 +9,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "tb_movie")
 public class Movie {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
-	private String subTile;
+	private String subTitle;
 	private Integer year;
 	private String imgUrl;
 	private String synopsis;
@@ -34,7 +34,7 @@ public class Movie {
 	public Movie(Long id, String title, String subTile, Integer year, String imgUrl, String synopsis, Genre genre) {
 		this.id = id;
 		this.title = title;
-		this.subTile = subTile;
+		this.subTitle = subTile;
 		this.year = year;
 		this.imgUrl = imgUrl;
 		this.synopsis = synopsis;
@@ -63,12 +63,12 @@ public class Movie {
 
 
 	public String getSubTile() {
-		return subTile;
+		return subTitle;
 	}
 
 
 	public void setSubTile(String subTile) {
-		this.subTile = subTile;
+		this.subTitle = subTile;
 	}
 
 
