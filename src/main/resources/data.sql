@@ -7,6 +7,10 @@ INSERT INTO tb_movie(title, sub_Title, year, img_Url, synopsis,genre_id)VALUES('
 
 INSERT INTO tb_movie(title, sub_Title, year, img_Url, synopsis,genre_id)VALUES('Corra que a polícia vem aí', 'Corra que a polícia vem aí',1998, 'https://www.youtube.com/watch?v=Q2s8N3OvLok&ab_channel=brunobenedet','Um bom filme de comédia ',2);
 
-INSERT INTO tb_review(text, movie_id)VALUES('Bom',1);
-INSERT INTO tb_review(text, movie_id)VALUES('Bom',2);
-INSERT INTO tb_review(text, movie_id)VALUES('Ótimo',1);
+INSERT INTO tb_user(name, email, password)VALUES('ana','ana@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+
+INSERT INTO tb_review(text, movie_id, user_id)VALUES('Bom',1 ,1);
+INSERT INTO tb_review(text, movie_id, user_id)VALUES('Bom',2 ,1);
+INSERT INTO tb_review(text, movie_id, user_id)VALUES('Ótimo',1,1);
+
+

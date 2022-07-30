@@ -37,15 +37,16 @@ public class Movie {
 		
 	}
 
-
-	public Movie(Long id, String title, String subTile, Integer year, String imgUrl, String synopsis, Genre genre) {
+	public Movie(Long id, String title, String subTitle, Integer year, String imgUrl, String synopsis, Genre genre,
+			List<Review> reviews) {
 		this.id = id;
 		this.title = title;
-		this.subTitle = subTile;
+		this.subTitle = subTitle;
 		this.year = year;
 		this.imgUrl = imgUrl;
 		this.synopsis = synopsis;
 		this.genre = genre;
+		this.reviews = reviews;
 	}
 
 
@@ -53,71 +54,65 @@ public class Movie {
 		return id;
 	}
 
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
 
 	public String getTitle() {
 		return title;
 	}
 
-
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
-
-	public String getSubTile() {
+	public String getSubTitle() {
 		return subTitle;
 	}
 
-
-	public void setSubTile(String subTile) {
-		this.subTitle = subTile;
+	public void setSubTitle(String subTitle) {
+		this.subTitle = subTitle;
 	}
-
 
 	public Integer getYear() {
 		return year;
 	}
 
-
 	public void setYear(Integer year) {
 		this.year = year;
 	}
-
 
 	public String getImgUrl() {
 		return imgUrl;
 	}
 
-
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
-
 
 	public String getSynopsis() {
 		return synopsis;
 	}
 
-
 	public void setSynopsis(String synopsis) {
 		this.synopsis = synopsis;
 	}
-
 
 	public Genre getGenre() {
 		return genre;
 	}
 
-
 	public void setGenre(Genre genre) {
 		this.genre = genre;
 	}
 
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
+	}
 
 	@Override
 	public int hashCode() {
